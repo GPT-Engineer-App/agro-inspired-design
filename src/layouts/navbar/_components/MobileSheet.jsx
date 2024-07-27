@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Package2 } from "lucide-react";
+import { Menu } from "lucide-react";
 import { NavItem } from "./NavItem";
 
 export const MobileSheet = ({ navItems }) => (
@@ -17,7 +17,7 @@ export const MobileSheet = ({ navItems }) => (
           to="/"
           className="flex items-center gap-2 text-lg font-semibold"
         >
-          <Package2 className="h-6 w-6 text-gold" />
+          <img src="/images/agro-lonious-logo.png" alt="Agro L'onious" className="h-8 w-auto" />
           <span className="text-earth-green">Agro L'onious</span>
         </NavItem>
         {navItems.map((item) => (

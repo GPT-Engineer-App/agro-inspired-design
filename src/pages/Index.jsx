@@ -9,7 +9,7 @@ const Index = () => {
       <section className="bg-gradient-to-r from-earth-green to-olive-green py-20 section-padding">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-4 text-gold">Welcome to Agro L'onious</h1>
+            <h1 className="text-4xl font-bold mb-4 text-white" style={{ fontFamily: 'Brush Script MT, cursive' }}>Welcome to Agro L'onious</h1>
             <p className="text-2xl mb-8 text-brown font-semibold drop-shadow-lg">Cultivating Nature's Finest Ingredients for Beauty and Wellness</p>
             <Button asChild size="lg" className="bg-rust-orange hover:bg-gold text-white transition-colors duration-300 btn-transition">
               <NavLink to="/products" className="flex items-center gap-2">
@@ -26,17 +26,17 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-padding">
-              <Package2 className="h-8 w-8 mx-auto mb-4 text-earth-green" />
+              <img src="/images/mission-icon.png" alt="Mission" className="h-16 w-16 mx-auto mb-4" />
               <h2 className="text-2xl font-semibold mb-4 text-earth-green">Our Mission</h2>
               <p className="text-dark-gray">To provide the highest quality natural ingredients for the beauty and wellness industry, sourced responsibly from the heart of Turkey.</p>
             </div>
             <div className="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-padding">
-              <Package2 className="h-8 w-8 mx-auto mb-4 text-earth-green" />
+              <img src="/images/vision-icon.png" alt="Vision" className="h-16 w-16 mx-auto mb-4" />
               <h2 className="text-2xl font-semibold mb-4 text-earth-green">Our Vision</h2>
               <p className="text-dark-gray">To be the leading supplier of premium Turkish botanicals, recognized globally for our commitment to quality, sustainability, and innovation.</p>
             </div>
             <div className="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-padding">
-              <Package2 className="h-8 w-8 mx-auto mb-4 text-earth-green" />
+              <img src="/images/values-icon.png" alt="Values" className="h-16 w-16 mx-auto mb-4" />
               <h2 className="text-2xl font-semibold mb-4 text-earth-green">Our Values</h2>
               <p className="text-dark-gray">Integrity, Sustainability, Quality, Innovation, and Customer-Centric Approach guide everything we do at Agro L'onious.</p>
             </div>

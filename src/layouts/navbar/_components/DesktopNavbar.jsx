@@ -6,6 +6,7 @@ export const DesktopNavbar = ({ navItems }) => (
       to="/"
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
+      <img src="/images/agro-lonious-logo.png" alt="Agro L'onious" className="h-8 w-auto" />
       <span className="text-white">Agro L'onious</span>
     </NavItem>
     {navItems.map((item) => (
