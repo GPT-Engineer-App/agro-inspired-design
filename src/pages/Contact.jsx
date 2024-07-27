@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -10,19 +11,30 @@ const Contact = () => {
       <h1 className="text-4xl font-bold mb-8 text-center text-earth-green">Contact Us</h1>
       
       <div className="grid md:grid-cols-2 gap-8">
-        <Card className="bg-white">
+        <Card className="bg-white shadow-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-earth-green">Contact Information</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-dark-gray"><strong className="text-brown">Address:</strong> 123 Botanical Street, Istanbul, Turkey</p>
-            <p className="mb-4 text-dark-gray"><strong className="text-brown">Phone:</strong> +90 (212) 555-1234</p>
-            <p className="mb-4 text-dark-gray"><strong className="text-brown">Email:</strong> info@agrolonious.com</p>
-            <p className="text-dark-gray"><strong className="text-brown">Business Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM (GMT+3)</p>
+            <div className="space-y-4">
+              <div className="flex items-center">
+                <MapPin className="h-5 w-5 mr-2 text-brown" />
+                <p className="text-dark-gray"><strong className="text-brown">Address:</strong> 123 Botanical Street, Istanbul, Turkey</p>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-5 w-5 mr-2 text-brown" />
+                <p className="text-dark-gray"><strong className="text-brown">Phone:</strong> +90 (212) 555-1234</p>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-5 w-5 mr-2 text-brown" />
+                <p className="text-dark-gray"><strong className="text-brown">Email:</strong> info@agrolonious.com</p>
+              </div>
+              <p className="text-dark-gray"><strong className="text-brown">Business Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM (GMT+3)</p>
+            </div>
           </CardContent>
         </Card>
         
-        <Card className="bg-white">
+        <Card className="bg-white shadow-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-earth-green">Send Us a Message</CardTitle>
           </CardHeader>
@@ -40,7 +52,7 @@ const Contact = () => {
                 <Label htmlFor="message" className="text-brown">Message</Label>
                 <Textarea id="message" placeholder="Your Message" className="bg-soft-beige" />
               </div>
-              <Button type="submit" className="w-full bg-rust-orange hover:bg-gold text-white">Send Message</Button>
+              <Button type="submit" className="w-full bg-rust-orange hover:bg-gold text-white transition-colors duration-300">Send Message</Button>
             </form>
           </CardContent>
         </Card>

@@ -12,16 +12,6 @@ const teamMembers = [
     bio: "Bogdan ensures our digital presence and internal systems are cutting-edge, supporting our commitment to innovation and efficiency."
   },
   {
-    name: "Zeynep Kaya",
-    role: "Head of Research & Development",
-    bio: "Zeynep's innovative approach to product development has been key to our success in creating high-quality natural ingredients."
-  },
-  {
-    name: "Mehmet Demir",
-    role: "Operations Manager",
-    bio: "Mehmet ensures the smooth running of our production facilities, maintaining the highest standards of quality and efficiency."
-  },
-  {
     name: "Tofi",
     role: "Company Dog",
     bio: "Tofi brings joy and comfort to our team, embodying our values of warmth and companionship in the workplace."
@@ -47,12 +37,12 @@ const AboutUs = () => {
         <h2 className="text-2xl font-semibold mb-6 text-olive-green">Our Team</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="bg-white">
+            <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="bg-earth-green text-white">
                 <CardTitle>{member.name}</CardTitle>
                 <p className="text-sm">{member.role}</p>
               </CardHeader>
-              <CardContent>
+              <CardContent className="mt-4">
                 <p className="text-dark-gray">{member.bio}</p>
               </CardContent>
             </Card>

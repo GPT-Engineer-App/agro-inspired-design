@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const products = [
   {
@@ -31,12 +32,12 @@ const Products = () => {
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product, index) => (
-          <Card key={index} className="flex flex-col bg-white">
+          <Card key={index} className="flex flex-col bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardHeader className="bg-olive-green text-white">
               <CardTitle className="text-xl font-semibold">{product.name}</CardTitle>
-              <p className="text-sm italic">{product.scientificName}</p>
+              <Badge variant="secondary" className="mt-2">{product.scientificName}</Badge>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow mt-4">
               <img src="/placeholder.svg" alt={product.name} className="w-full h-48 object-cover mb-4 rounded" />
               <h3 className="font-semibold mb-2 text-brown">Origin:</h3>
               <p className="mb-4 text-dark-gray">{product.origin}</p>
