@@ -13,7 +13,7 @@ export const DesktopNavbar = ({ navItems }) => (
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
         {item.icon}
-        {item.title}
+        <span>{item.title}</span>
       </NavItem>
     ))}
   </nav>

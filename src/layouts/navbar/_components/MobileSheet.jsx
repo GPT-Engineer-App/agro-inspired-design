@@ -21,9 +21,9 @@ export const MobileSheet = ({ navItems }) => (
           <span className="text-earth-green">Agro L'onious</span>
         </NavItem>
         {navItems.map((item) => (
-          <NavItem key={item.to} to={item.to}>
+          <NavItem key={item.to} to={item.to} className="text-earth-green">
             {item.icon}
-            {item.title}
+            <span>{item.title}</span>
           </NavItem>
         ))}
       </nav>
