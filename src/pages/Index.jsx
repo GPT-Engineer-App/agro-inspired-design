@@ -5,11 +5,11 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen bg-soft-beige">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-earth-green to-olive-green text-white py-20">
+      <section className="bg-gradient-to-r from-earth-green to-olive-green py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-4">Welcome to Agro L'onious</h1>
-            <p className="text-xl mb-8">Cultivating Nature's Finest Ingredients for Beauty and Wellness</p>
+            <h1 className="text-4xl font-bold mb-4 text-gold">Welcome to Agro L'onious</h1>
+            <p className="text-xl mb-8 text-white">Cultivating Nature's Finest Ingredients for Beauty and Wellness</p>
             <Button asChild className="bg-rust-orange hover:bg-gold text-white">
               <NavLink to="/products">
                 Explore Our Products

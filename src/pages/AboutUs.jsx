@@ -2,9 +2,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const teamMembers = [
   {
-    name: "Ahmet Yilmaz",
-    role: "Founder & CEO",
-    bio: "With over 20 years of experience in agriculture and botanicals, Ahmet leads Agro L'onious with passion and expertise."
+    name: "Melis Akungor",
+    role: "CEO & Founder",
+    bio: "Melis leads Agro L'onious with passion and expertise, driving our mission to provide premium Turkish botanicals to the global market."
+  },
+  {
+    name: "Bogdan Iordache",
+    role: "Head of Software Development",
+    bio: "Bogdan ensures our digital presence and internal systems are cutting-edge, supporting our commitment to innovation and efficiency."
   },
   {
     name: "Zeynep Kaya",
@@ -15,6 +20,11 @@ const teamMembers = [
     name: "Mehmet Demir",
     role: "Operations Manager",
     bio: "Mehmet ensures the smooth running of our production facilities, maintaining the highest standards of quality and efficiency."
+  },
+  {
+    name: "Tofi",
+    role: "Company Dog",
+    bio: "Tofi brings joy and comfort to our team, embodying our values of warmth and companionship in the workplace."
   }
 ];
 
