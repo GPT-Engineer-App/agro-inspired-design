@@ -26,24 +26,24 @@ const products = [
 
 const Products = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-8 text-center text-green-800">Our Products</h1>
+    <div className="container mx-auto px-4 py-16 bg-soft-beige">
+      <h1 className="text-4xl font-bold mb-8 text-center text-earth-green">Our Products</h1>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product, index) => (
-          <Card key={index} className="flex flex-col">
-            <CardHeader>
-              <CardTitle className="text-xl font-semibold text-green-700">{product.name}</CardTitle>
-              <p className="text-sm text-gray-500 italic">{product.scientificName}</p>
+          <Card key={index} className="flex flex-col bg-white">
+            <CardHeader className="bg-olive-green text-white">
+              <CardTitle className="text-xl font-semibold">{product.name}</CardTitle>
+              <p className="text-sm italic">{product.scientificName}</p>
             </CardHeader>
             <CardContent className="flex-grow">
               <img src="/placeholder.svg" alt={product.name} className="w-full h-48 object-cover mb-4 rounded" />
-              <h3 className="font-semibold mb-2">Origin:</h3>
-              <p className="mb-4">{product.origin}</p>
-              <h3 className="font-semibold mb-2">Chemical Formulation:</h3>
-              <p className="mb-4">{product.chemicalFormulation}</p>
-              <h3 className="font-semibold mb-2">Applications:</h3>
-              <p>{product.applications}</p>
+              <h3 className="font-semibold mb-2 text-brown">Origin:</h3>
+              <p className="mb-4 text-dark-gray">{product.origin}</p>
+              <h3 className="font-semibold mb-2 text-brown">Chemical Formulation:</h3>
+              <p className="mb-4 text-dark-gray">{product.chemicalFormulation}</p>
+              <h3 className="font-semibold mb-2 text-brown">Applications:</h3>
+              <p className="text-dark-gray">{product.applications}</p>
             </CardContent>
           </Card>
         ))}
