@@ -22,13 +22,13 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h1 
-              className="text-5xl font-bold mb-6 text-white font-calligraphy"
+              className="text-6xl font-bold mb-6 text-white font-calligraphy"
               {...fadeIn}
             >
               Welcome to Agro L'onious
             </motion.h1>
             <motion.p 
-              className="text-2xl mb-8 text-soft-beige font-semibold drop-shadow-lg"
+              className="text-3xl mb-8 text-soft-beige font-semibold drop-shadow-lg"
               {...fadeIn}
               transition={{ delay: 0.2 }}
             >
@@ -52,9 +52,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "Our Mission", icon: <Leaf className="h-8 w-8 mb-4 text-earth-green" />, content: "To provide the highest quality natural ingredients for the beauty and wellness industry, sourced responsibly from the heart of Turkey." },
-              { title: "Our Vision", icon: <Shield className="h-8 w-8 mb-4 text-earth-green" />, content: "To be the leading supplier of premium Turkish botanicals, recognized globally for our commitment to quality, sustainability, and innovation." },
-              { title: "Our Values", icon: <Recycle className="h-8 w-8 mb-4 text-earth-green" />, content: "Integrity, Sustainability, Quality, Innovation, and Customer-Centric Approach guide everything we do at Agro L'onious." }
+              { title: "Our Mission", icon: <Leaf className="h-10 w-10 mb-4 text-earth-green" />, content: "To provide the highest quality natural ingredients for the beauty and wellness industry, sourced responsibly from the heart of Turkey." },
+              { title: "Our Vision", icon: <Shield className="h-10 w-10 mb-4 text-earth-green" />, content: "To be the leading supplier of premium Turkish botanicals, recognized globally for our commitment to quality, sustainability, and innovation." },
+              { title: "Our Values", icon: <Recycle className="h-10 w-10 mb-4 text-earth-green" />, content: "Integrity, Sustainability, Quality, Innovation, and Customer-Centric Approach guide everything we do at Agro L'onious." }
             ].map((item, index) => (
               <motion.div 
                 key={index}
@@ -64,8 +64,8 @@ const Index = () => {
                 transition={{ delay: index * 0.2 }}
               >
                 {item.icon}
-                <h2 className="text-2xl font-semibold mb-4 text-earth-green">{item.title}</h2>
-                <p className="text-dark-gray">{item.content}</p>
+                <h2 className="text-3xl font-semibold mb-4 text-earth-green">{item.title}</h2>
+                <p className="text-xl text-dark-gray">{item.content}</p>
               </motion.div>
             ))}
           </div>
@@ -75,7 +75,7 @@ const Index = () => {
       {/* Journey Section */}
       <section className="py-20 bg-white section-padding">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-earth-green">Our Journey</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-earth-green">Our Journey</h2>
           <div className="max-w-3xl mx-auto">
             <ul className="space-y-6">
               {[
@@ -93,9 +93,9 @@ const Index = () => {
                   transition={{ delay: index * 0.1 }}
                 >
                   <div className="bg-gold rounded-full p-3 mr-6 flex-shrink-0">
-                    <span className="text-earth-green font-bold">{item.year}</span>
+                    <span className="text-earth-green font-bold text-xl">{item.year}</span>
                   </div>
-                  <p className="text-dark-gray flex-grow">{item.event}</p>
+                  <p className="text-dark-gray text-lg flex-grow">{item.event}</p>
                 </motion.li>
               ))}
             </ul>

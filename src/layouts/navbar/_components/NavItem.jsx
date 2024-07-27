@@ -9,7 +9,7 @@ export const NavItem = ({ to, children, className }) => (
         "transition-colors link-transition",
         isActive
           ? "text-gold font-semibold"
-          : "text-soft-beige hover:text-gold",
+          : "text-soft-beige hover:text-yellow-300",
         className,
       )
     }

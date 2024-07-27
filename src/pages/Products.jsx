@@ -3,10 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -42,6 +45,12 @@ const Products = () => {
     }
   };
 
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    product.scientificName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    product.applications.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="container mx-auto px-4 py-16 bg-soft-beige section-padding">
       <motion.h1 
@@ -53,6 +62,17 @@ const Products = () => {
         Our Products
       </motion.h1>
       
+      <div className="mb-8 relative">
+        <Input
+          type="text"
+          placeholder="Search products..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="pl-10"
+        />
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+      </div>
+
       <motion.div 
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         variants={containerVariants}
@@ -63,7 +83,7 @@ const Products = () => {
           // Skeleton loading state
           Array(6).fill().map((_, index) => (
             <Card key={index} className="flex flex-col bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 card-padding">
-              <CardHeader className="bg-olive-green">
+              <CardHeader className="bg-yellow-100 rounded-t-lg">
                 <Skeleton className="h-6 w-3/4" />
                 <Skeleton className="h-4 w-1/2 mt-2" />
               </CardHeader>
@@ -79,12 +99,12 @@ const Products = () => {
             </Card>
           ))
         ) : (
-          products.map((product, index) => (
+          filteredProducts.map((product, index) => (
             <motion.div key={index} variants={itemVariants}>
               <Card className="flex flex-col bg-white shadow-lg hover:shadow-xl transition-all duration-300 card-padding transform hover:-translate-y-1">
-                <CardHeader className="bg-olive-green text-white">
-                  <CardTitle className="text-xl font-semibold">{product.name}</CardTitle>
-                  <Badge variant="secondary" className="mt-2 bg-gold text-earth-green">{product.scientificName}</Badge>
+                <CardHeader className="bg-yellow-100 rounded-t-lg">
+                  <CardTitle className="text-xl font-semibold text-earth-green">{product.name}</CardTitle>
+                  <Badge variant="secondary" className="mt-2 bg-yellow-200 text-earth-green">{product.scientificName}</Badge>
                 </CardHeader>
                 <CardContent className="flex-grow mt-4">
                   <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
