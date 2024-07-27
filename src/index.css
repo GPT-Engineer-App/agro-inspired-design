@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -72,6 +74,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
   }
 }
 
@@ -129,4 +136,35 @@
 
 .bg-gold {
   background-color: #FFD700;
+}
+
+/* Interactive Elements */
+.btn-transition {
+  transition: all 0.3s ease;
+}
+
+.btn-transition:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.link-transition {
+  transition: color 0.3s ease;
+}
+
+.link-transition:hover {
+  color: var(--accent);
+}
+
+/* Consistent Spacing */
+.section-padding {
+  padding: 4rem 0;
+}
+
+.content-margin {
+  margin-bottom: 2rem;
+}
+
+.card-padding {
+  padding: 1.5rem;
 }

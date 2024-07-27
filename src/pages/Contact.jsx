@@ -7,11 +7,11 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="container mx-auto px-4 py-16 bg-soft-beige">
+    <div className="container mx-auto px-4 py-16 bg-soft-beige section-padding">
       <h1 className="text-4xl font-bold mb-8 text-center text-earth-green">Contact Us</h1>
       
       <div className="grid md:grid-cols-2 gap-8">
-        <Card className="bg-white shadow-lg">
+        <Card className="bg-white shadow-lg card-padding">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-earth-green">Contact Information</CardTitle>
           </CardHeader>
@@ -34,7 +34,7 @@ const Contact = () => {
           </CardContent>
         </Card>
         
-        <Card className="bg-white shadow-lg">
+        <Card className="bg-white shadow-lg card-padding">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-earth-green">Send Us a Message</CardTitle>
           </CardHeader>
@@ -52,7 +52,7 @@ const Contact = () => {
                 <Label htmlFor="message" className="text-brown">Message</Label>
                 <Textarea id="message" placeholder="Your Message" className="bg-soft-beige" />
               </div>
-              <Button type="submit" className="w-full bg-rust-orange hover:bg-gold text-white transition-colors duration-300">Send Message</Button>
+              <Button type="submit" className="w-full bg-rust-orange hover:bg-gold text-white transition-colors duration-300 btn-transition">Send Message</Button>
             </form>
           </CardContent>
         </Card>

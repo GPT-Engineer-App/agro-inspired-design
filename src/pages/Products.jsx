@@ -27,12 +27,12 @@ const products = [
 
 const Products = () => {
   return (
-    <div className="container mx-auto px-4 py-16 bg-soft-beige">
+    <div className="container mx-auto px-4 py-16 bg-soft-beige section-padding">
       <h1 className="text-4xl font-bold mb-8 text-center text-earth-green">Our Products</h1>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product, index) => (
-          <Card key={index} className="flex flex-col bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <Card key={index} className="flex flex-col bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 card-padding">
             <CardHeader className="bg-olive-green text-white">
               <CardTitle className="text-xl font-semibold">{product.name}</CardTitle>
               <Badge variant="secondary" className="mt-2">{product.scientificName}</Badge>
