@@ -22,7 +22,7 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h1 
-              className="text-5xl font-bold mb-6 text-gold"
+              className="text-5xl font-bold mb-6 text-gold font-calligraphy"
               {...fadeIn}
             >
               Welcome to Agro L'onious

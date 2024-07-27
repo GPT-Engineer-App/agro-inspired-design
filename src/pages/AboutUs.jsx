@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Award, Users, Leaf } from "lucide-react";
+import { Award, Users, Leaf, Linkedin } from "lucide-react";
 
 const teamMembers = [
   {
@@ -13,7 +13,8 @@ const teamMembers = [
     name: "Bogdan Iordache",
     role: "Head of Software Development",
     bio: "Bogdan ensures our digital presence and internal systems are cutting-edge, supporting our commitment to innovation and efficiency.",
-    icon: <Users className="h-12 w-12 mb-4 text-gold" />
+    icon: <Users className="h-12 w-12 mb-4 text-gold" />,
+    linkedin: "https://www.linkedin.com/in/mihai-iordache-676444187/"
   },
   {
     name: "Tofi",
@@ -76,6 +77,13 @@ const AboutUs = () => {
                 </CardHeader>
                 <CardContent className="mt-4">
                   <p className="text-dark-gray text-center">{member.bio}</p>
+                  {member.linkedin && (
+                    <div className="mt-4 flex justify-center">
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-earth-green hover:text-gold transition-colors duration-300">
+                        <Linkedin className="h-6 w-6" />
+                      </a>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>

@@ -68,7 +68,7 @@ const Products = () => {
                 <Skeleton className="h-4 w-1/2 mt-2" />
               </CardHeader>
               <CardContent className="flex-grow mt-4">
-                <Skeleton className="w-full h-48 mb-4" />
+                <Skeleton className="w-full h-48 mb-4 rounded-lg" />
                 <Skeleton className="h-4 w-3/4 mb-2" />
                 <Skeleton className="h-4 w-full mb-4" />
                 <Skeleton className="h-4 w-3/4 mb-2" />
@@ -87,7 +87,9 @@ const Products = () => {
                   <Badge variant="secondary" className="mt-2 bg-gold text-earth-green">{product.scientificName}</Badge>
                 </CardHeader>
                 <CardContent className="flex-grow mt-4">
-                  <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4 rounded" />
+                  <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                    <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                  </div>
                   <h3 className="font-semibold mb-2 text-brown">Origin:</h3>
                   <p className="mb-4 text-dark-gray">{product.origin}</p>
                   <h3 className="font-semibold mb-2 text-brown">Chemical Formulation:</h3>
