@@ -7,8 +7,8 @@ export const DesktopNavbar = ({ navItems }) => (
       to="/"
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
-      <Package2 className="h-6 w-6 text-gold" />
-      <span className="text-white">Agro L'onious</span>
+      <Package2 className="h-6 w-6 text-green-700" />
+      <span className="text-green-800">Agro L'onious</span>
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>

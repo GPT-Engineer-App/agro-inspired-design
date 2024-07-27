@@ -1,70 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
  
 @layer base {
   :root {
-    --background: 60 11% 98%;
-    --foreground: 20 14% 4%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-    --card: 60 11% 98%;
-    --card-foreground: 20 14% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
  
-    --popover: 60 11% 98%;
-    --popover-foreground: 20 14% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
  
-    --primary: 122 40% 49%;
-    --primary-foreground: 60 11% 98%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
  
-    --secondary: 34 17% 47%;
-    --secondary-foreground: 60 11% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
  
-    --muted: 60 5% 96%;
-    --muted-foreground: 25 5% 45%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
  
-    --accent: 43 89% 38%;
-    --accent-foreground: 60 11% 98%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
  
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 60 11% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 20 5% 90%;
-    --input: 20 5% 90%;
-    --ring: 122 40% 49%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
  
     --radius: 0.5rem;
   }
  
   .dark {
-    --background: 20 14% 4%;
-    --foreground: 60 11% 98%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
  
-    --card: 20 14% 4%;
-    --card-foreground: 60 11% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
  
-    --popover: 20 14% 4%;
-    --popover-foreground: 60 11% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
  
-    --primary: 122 40% 49%;
-    --primary-foreground: 60 11% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
  
-    --secondary: 34 17% 47%;
-    --secondary-foreground: 60 11% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
  
-    --muted: 12 6% 15%;
-    --muted-foreground: 24 5% 64%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
  
-    --accent: 43 89% 38%;
-    --accent-foreground: 60 11% 98%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
  
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 60 11% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
  
-    --border: 12 6% 15%;
-    --input: 12 6% 15%;
-    --ring: 122 40% 49%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
  
@@ -74,97 +72,5 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', sans-serif;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-  }
-}
-
-.text-earth-green {
-  color: #4CAF50;
-}
-
-.text-brown {
-  color: #8D6E63;
-}
-
-.text-soft-beige {
-  color: #F5F5DC;
-}
-
-.text-olive-green {
-  color: #8E8D8A;
-}
-
-.text-rust-orange {
-  color: #D2691E;
-}
-
-.text-gold {
-  color: #FFD700;
-}
-
-.text-dark-gray {
-  color: #333333;
-}
-
-.text-light-gray {
-  color: #777777;
-}
-
-.bg-earth-green {
-  background-color: #4CAF50;
-}
-
-.bg-brown {
-  background-color: #8D6E63;
-}
-
-.bg-soft-beige {
-  background-color: #F5F5DC;
-}
-
-.bg-olive-green {
-  background-color: #8E8D8A;
-}
-
-.bg-rust-orange {
-  background-color: #D2691E;
-}
-
-.bg-gold {
-  background-color: #FFD700;
-}
-
-/* Interactive Elements */
-.btn-transition {
-  transition: all 0.3s ease;
-}
-
-.btn-transition:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.link-transition {
-  transition: color 0.3s ease;
-}
-
-.link-transition:hover {
-  color: var(--accent);
-}
-
-/* Consistent Spacing */
-.section-padding {
-  padding: 4rem 0;
-}
-
-.content-margin {
-  margin-bottom: 2rem;
-}
-
-.card-padding {
-  padding: 1.5rem;
 }
