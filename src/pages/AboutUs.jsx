@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Building2, Dog } from "lucide-react";
+import { Users, Building2, Dog, Linkedin } from "lucide-react";
 
 const teamMembers = [
   {
@@ -12,7 +12,8 @@ const teamMembers = [
     name: "Bogdan Iordache",
     role: "Head of Software Development",
     bio: "Bogdan ensures our digital presence and internal systems are cutting-edge, supporting our commitment to innovation and efficiency.",
-    icon: <Building2 className="h-6 w-6 text-earth-green" />
+    icon: <Building2 className="h-6 w-6 text-earth-green" />,
+    linkedin: "https://www.linkedin.com/in/mihai-iordache-676444187/"
   },
   {
     name: "Tofi",
@@ -51,9 +52,16 @@ const AboutUs = () => {
           {teamMembers.map((member, index) => (
             <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="bg-earth-green text-white">
-                <CardTitle className="flex items-center">
-                  {member.icon}
-                  <span className="ml-2">{member.name}</span>
+                <CardTitle className="flex items-center justify-between">
+                  <span className="flex items-center">
+                    {member.icon}
+                    <span className="ml-2">{member.name}</span>
+                  </span>
+                  {member.linkedin && (
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                  )}
                 </CardTitle>
                 <p className="text-sm">{member.role}</p>
               </CardHeader>
