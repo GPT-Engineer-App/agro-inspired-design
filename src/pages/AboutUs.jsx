@@ -6,20 +6,23 @@ const teamMembers = [
     name: "Melis Akungor",
     role: "CEO & Founder",
     bio: "Melis leads Agro L'onious with passion and expertise, driving our mission to provide premium Turkish botanicals to the global market.",
-    icon: <Users className="h-6 w-6 text-earth-green" />
+    icon: <Users className="h-6 w-6 text-earth-green" />,
+    logo: "/ceo-logo.svg"
   },
   {
     name: "Bogdan Iordache",
     role: "Head of Software Development",
     bio: "Bogdan ensures our digital presence and internal systems are cutting-edge, supporting our commitment to innovation and efficiency.",
     icon: <Building2 className="h-6 w-6 text-earth-green" />,
-    linkedin: "https://www.linkedin.com/in/mihai-iordache-676444187/"
+    linkedin: "https://www.linkedin.com/in/mihai-iordache-676444187/",
+    logo: "/software-dev-logo.svg"
   },
   {
     name: "Tofi",
     role: "Company Dog",
     bio: "Tofi brings joy and comfort to our team, embodying our values of warmth and companionship in the workplace.",
-    icon: <Dog className="h-6 w-6 text-earth-green" />
+    icon: <Dog className="h-6 w-6 text-earth-green" />,
+    logo: "/company-dog-logo.svg"
   }
 ];
 
@@ -66,6 +69,9 @@ const AboutUs = () => {
                 <p className="text-sm">{member.role}</p>
               </CardHeader>
               <CardContent className="mt-4">
+                <div className="flex justify-center mb-4">
+                  <img src={member.logo} alt={`${member.role} Logo`} className="w-16 h-16" />
+                </div>
                 <p className="text-dark-gray">{member.bio}</p>
               </CardContent>
             </Card>
