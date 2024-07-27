@@ -5,7 +5,7 @@ import { MobileSheet } from "./_components/MobileSheet";
 
 const Layout = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-soft-beige">
+    <div className="flex min-h-screen w-full flex-col bg-soft-beige font-sans">
       <header className="sticky top-0 z-50 flex h-16 items-center gap-4 border-b bg-earth-green px-4 md:px-6 justify-between">
         <DesktopNavbar navItems={navItems} />
         <div className="flex items-center gap-4">
