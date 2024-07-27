@@ -1,35 +1,37 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Package2 } from "lucide-react";
+import { Users, Building2, Dog } from "lucide-react";
 
 const teamMembers = [
   {
     name: "Melis Akungor",
     role: "CEO & Founder",
-    bio: "Melis leads Agro L'onious with passion and expertise, driving our mission to provide premium Turkish botanicals to the global market."
+    bio: "Melis leads Agro L'onious with passion and expertise, driving our mission to provide premium Turkish botanicals to the global market.",
+    icon: <Users className="h-6 w-6 text-earth-green" />
   },
   {
     name: "Bogdan Iordache",
     role: "Head of Software Development",
-    bio: "Bogdan ensures our digital presence and internal systems are cutting-edge, supporting our commitment to innovation and efficiency."
+    bio: "Bogdan ensures our digital presence and internal systems are cutting-edge, supporting our commitment to innovation and efficiency.",
+    icon: <Building2 className="h-6 w-6 text-earth-green" />
   },
   {
     name: "Tofi",
     role: "Company Dog",
-    bio: "Tofi brings joy and comfort to our team, embodying our values of warmth and companionship in the workplace."
+    bio: "Tofi brings joy and comfort to our team, embodying our values of warmth and companionship in the workplace.",
+    icon: <Dog className="h-6 w-6 text-earth-green" />
   }
 ];
 
 const AboutUs = () => {
   return (
     <div className="container mx-auto px-4 py-16 bg-soft-beige">
-      <h1 className="text-4xl font-bold mb-8 text-center text-earth-green flex items-center justify-center">
-        <Package2 className="h-8 w-8 mr-2" />
+      <h1 className="text-4xl font-bold mb-8 text-center text-earth-green">
         About Agro L'onious
       </h1>
       
       <section className="mb-16">
         <h2 className="text-2xl font-semibold mb-4 text-olive-green flex items-center">
-          <Package2 className="h-6 w-6 mr-2" />
+          <Building2 className="h-6 w-6 mr-2 text-earth-green" />
           Company Background
         </h2>
         <p className="mb-4 text-dark-gray">
@@ -42,7 +44,7 @@ const AboutUs = () => {
       
       <section>
         <h2 className="text-2xl font-semibold mb-6 text-olive-green flex items-center">
-          <Package2 className="h-6 w-6 mr-2" />
+          <Users className="h-6 w-6 mr-2 text-earth-green" />
           Our Team
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
@@ -50,8 +52,8 @@ const AboutUs = () => {
             <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="bg-earth-green text-white">
                 <CardTitle className="flex items-center">
-                  <Package2 className="h-5 w-5 mr-2" />
-                  {member.name}
+                  {member.icon}
+                  <span className="ml-2">{member.name}</span>
                 </CardTitle>
                 <p className="text-sm">{member.role}</p>
               </CardHeader>

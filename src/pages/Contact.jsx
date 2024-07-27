@@ -3,13 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Package2 } from "lucide-react";
+import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 
 const Contact = () => {
   return (
     <div className="container mx-auto px-4 py-16 bg-soft-beige section-padding">
       <h1 className="text-4xl font-bold mb-8 text-center text-earth-green flex items-center justify-center">
-        <Package2 className="h-8 w-8 mr-2" />
+        <MessageSquare className="h-8 w-8 mr-2" />
         Contact Us
       </h1>
       
@@ -17,7 +17,7 @@ const Contact = () => {
         <Card className="bg-white shadow-lg card-padding">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-earth-green flex items-center">
-              <Package2 className="h-6 w-6 mr-2" />
+              <Mail className="h-6 w-6 mr-2" />
               Contact Information
             </CardTitle>
           </CardHeader>
@@ -43,7 +43,7 @@ const Contact = () => {
         <Card className="bg-white shadow-lg card-padding">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-earth-green flex items-center">
-              <Package2 className="h-6 w-6 mr-2" />
+              <MessageSquare className="h-6 w-6 mr-2" />
               Send Us a Message
             </CardTitle>
           </CardHeader>
@@ -62,7 +62,7 @@ const Contact = () => {
                 <Textarea id="message" placeholder="Your Message" className="bg-soft-beige" />
               </div>
               <Button type="submit" className="w-full bg-rust-orange hover:bg-gold text-white transition-colors duration-300 btn-transition flex items-center justify-center">
-                <Package2 className="h-5 w-5 mr-2" />
+                <MessageSquare className="h-5 w-5 mr-2" />
                 Send Message
               </Button>
             </form>
