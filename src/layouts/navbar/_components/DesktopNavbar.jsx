@@ -1,4 +1,3 @@
-import { Package2 } from "lucide-react";
 import { NavItem } from "./NavItem";
 
 export const DesktopNavbar = ({ navItems }) => (
@@ -7,8 +6,7 @@ export const DesktopNavbar = ({ navItems }) => (
       to="/"
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
-      <Package2 className="h-6 w-6 text-gold" />
-      <span className="text-white">Agro L'onious</span>
+      <img src="/logo.png" alt="Agro L'onious Logo" className="h-10 w-auto" />
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
