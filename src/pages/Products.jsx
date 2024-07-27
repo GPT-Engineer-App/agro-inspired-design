@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Package2 } from "lucide-react";
+import { Sprout } from "lucide-react";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -23,16 +23,15 @@ const Products = () => {
   return (
     <div className="container mx-auto px-4 py-16 bg-soft-beige section-padding">
       <h1 className="text-4xl font-bold mb-8 text-center text-earth-green flex items-center justify-center">
-        <Package2 className="h-8 w-8 mr-2" />
+        <Sprout className="h-8 w-8 mr-2" />
         Our Products
       </h1>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product, index) => (
           <Card key={index} className="flex flex-col bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 card-padding">
-            <CardHeader className="bg-olive-green text-white">
-              <CardTitle className="text-xl font-semibold flex items-center">
-                <Package2 className="h-6 w-6 mr-2" />
+            <CardHeader className="bg-light-pastel rounded-t-lg">
+              <CardTitle className="text-xl font-semibold flex items-center text-earth-green">
                 {product.name}
               </CardTitle>
               <Badge variant="secondary" className="mt-2">{product.scientificName}</Badge>
