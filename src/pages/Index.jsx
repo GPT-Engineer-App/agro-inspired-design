@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
+import { Package2 } from "lucide-react";
 
 const Index = () => {
   return (
@@ -11,7 +12,8 @@ const Index = () => {
             <h1 className="text-4xl font-bold mb-4 text-gold">Welcome to Agro L'onious</h1>
             <p className="text-2xl mb-8 text-brown font-semibold drop-shadow-lg">Cultivating Nature's Finest Ingredients for Beauty and Wellness</p>
             <Button asChild size="lg" className="bg-rust-orange hover:bg-gold text-white transition-colors duration-300 btn-transition">
-              <NavLink to="/products">
+              <NavLink to="/products" className="flex items-center gap-2">
+                <Package2 className="h-5 w-5" />
                 Explore Our Products
               </NavLink>
             </Button>
@@ -24,14 +26,17 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-padding">
+              <Package2 className="h-8 w-8 mx-auto mb-4 text-earth-green" />
               <h2 className="text-2xl font-semibold mb-4 text-earth-green">Our Mission</h2>
               <p className="text-dark-gray">To provide the highest quality natural ingredients for the beauty and wellness industry, sourced responsibly from the heart of Turkey.</p>
             </div>
             <div className="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-padding">
+              <Package2 className="h-8 w-8 mx-auto mb-4 text-earth-green" />
               <h2 className="text-2xl font-semibold mb-4 text-earth-green">Our Vision</h2>
               <p className="text-dark-gray">To be the leading supplier of premium Turkish botanicals, recognized globally for our commitment to quality, sustainability, and innovation.</p>
             </div>
             <div className="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-padding">
+              <Package2 className="h-8 w-8 mx-auto mb-4 text-earth-green" />
               <h2 className="text-2xl font-semibold mb-4 text-earth-green">Our Values</h2>
               <p className="text-dark-gray">Integrity, Sustainability, Quality, Innovation, and Customer-Centric Approach guide everything we do at Agro L'onious.</p>
             </div>
@@ -46,23 +51,23 @@ const Index = () => {
           <div className="max-w-3xl mx-auto">
             <ul className="space-y-4">
               <li className="flex items-center bg-soft-beige p-4 rounded-lg shadow-sm">
-                <div className="bg-gold rounded-full p-2 mr-4"></div>
+                <Package2 className="h-6 w-6 mr-4 text-gold" />
                 <p className="text-dark-gray"><strong className="text-brown">2010:</strong> Agro L'onious founded in Istanbul, Turkey</p>
               </li>
               <li className="flex items-center bg-soft-beige p-4 rounded-lg shadow-sm">
-                <div className="bg-gold rounded-full p-2 mr-4"></div>
+                <Package2 className="h-6 w-6 mr-4 text-gold" />
                 <p className="text-dark-gray"><strong className="text-brown">2015:</strong> Expanded product line to include Black Cumin Seed and Sumac</p>
               </li>
               <li className="flex items-center bg-soft-beige p-4 rounded-lg shadow-sm">
-                <div className="bg-gold rounded-full p-2 mr-4"></div>
+                <Package2 className="h-6 w-6 mr-4 text-gold" />
                 <p className="text-dark-gray"><strong className="text-brown">2018:</strong> Achieved organic certification for all products</p>
               </li>
               <li className="flex items-center bg-soft-beige p-4 rounded-lg shadow-sm">
-                <div className="bg-gold rounded-full p-2 mr-4"></div>
+                <Package2 className="h-6 w-6 mr-4 text-gold" />
                 <p className="text-dark-gray"><strong className="text-brown">2020:</strong> Launched international distribution network</p>
               </li>
               <li className="flex items-center bg-soft-beige p-4 rounded-lg shadow-sm">
-                <div className="bg-gold rounded-full p-2 mr-4"></div>
+                <Package2 className="h-6 w-6 mr-4 text-gold" />
                 <p className="text-dark-gray"><strong className="text-brown">2023:</strong> Celebrating over a decade of excellence in natural ingredients</p>
               </li>
             </ul>

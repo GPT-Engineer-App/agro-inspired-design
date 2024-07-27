@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Package2 } from "lucide-react";
 
 const teamMembers = [
   {
@@ -21,10 +22,16 @@ const teamMembers = [
 const AboutUs = () => {
   return (
     <div className="container mx-auto px-4 py-16 bg-soft-beige">
-      <h1 className="text-4xl font-bold mb-8 text-center text-earth-green">About Agro L'onious</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center text-earth-green flex items-center justify-center">
+        <Package2 className="h-8 w-8 mr-2" />
+        About Agro L'onious
+      </h1>
       
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-4 text-olive-green">Company Background</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-olive-green flex items-center">
+          <Package2 className="h-6 w-6 mr-2" />
+          Company Background
+        </h2>
         <p className="mb-4 text-dark-gray">
           Founded in 2010, Agro L'onious has established itself as a leading supplier of premium Turkish botanicals for the beauty and wellness industry. Our commitment to quality, sustainability, and innovation has made us a trusted partner for companies worldwide.
         </p>
@@ -34,12 +41,18 @@ const AboutUs = () => {
       </section>
       
       <section>
-        <h2 className="text-2xl font-semibold mb-6 text-olive-green">Our Team</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-olive-green flex items-center">
+          <Package2 className="h-6 w-6 mr-2" />
+          Our Team
+        </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {teamMembers.map((member, index) => (
             <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="bg-earth-green text-white">
-                <CardTitle>{member.name}</CardTitle>
+                <CardTitle className="flex items-center">
+                  <Package2 className="h-5 w-5 mr-2" />
+                  {member.name}
+                </CardTitle>
                 <p className="text-sm">{member.role}</p>
               </CardHeader>
               <CardContent className="mt-4">
