@@ -28,17 +28,17 @@ const Index = () => {
             <div className="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-padding">
               <Target className="h-12 w-12 mx-auto mb-4 text-earth-green" />
               <h2 className="text-2xl font-semibold mb-4 text-earth-green">Our Mission</h2>
-              <p className="text-dark-gray">To provide the highest quality natural ingredients for the beauty and wellness industry, sourced responsibly from the heart of Turkey.</p>
+              <p className="text-olive-green">To provide the highest quality natural ingredients for the beauty and wellness industry, sourced responsibly from the heart of Turkey.</p>
             </div>
             <div className="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-padding">
               <Leaf className="h-12 w-12 mx-auto mb-4 text-earth-green" />
               <h2 className="text-2xl font-semibold mb-4 text-earth-green">Our Vision</h2>
-              <p className="text-dark-gray">To be the leading supplier of premium Turkish botanicals, recognized globally for our commitment to quality, sustainability, and innovation.</p>
+              <p className="text-olive-green">To be the leading supplier of premium Turkish botanicals, recognized globally for our commitment to quality, sustainability, and innovation.</p>
             </div>
             <div className="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 card-padding">
               <Sprout className="h-12 w-12 mx-auto mb-4 text-earth-green" />
               <h2 className="text-2xl font-semibold mb-4 text-earth-green">Our Values</h2>
-              <p className="text-dark-gray">Integrity, Sustainability, Quality, Innovation, and Customer-Centric Approach guide everything we do at Agro L'onious.</p>
+              <p className="text-olive-green">Integrity, Sustainability, Quality, Innovation, and Customer-Centric Approach guide everything we do at Agro L'onious.</p>
             </div>
           </div>
         </div>
