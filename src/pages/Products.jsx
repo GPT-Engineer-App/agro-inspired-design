@@ -25,8 +25,8 @@ const Products = () => {
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product, index) => (
-          <Card key={index} className="flex flex-col bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 card-padding">
-            <CardHeader className="bg-light-olive rounded-t-lg">
+          <Card key={index} className="flex flex-col bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 card-padding overflow-hidden">
+            <CardHeader className="bg-light-olive rounded-t-lg p-4">
               <CardTitle className="text-xl font-semibold text-earth-green">
                 {product.name}
               </CardTitle>
