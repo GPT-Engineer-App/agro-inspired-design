@@ -1,31 +1,24 @@
+import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-const products = [
-  {
-    name: "Turkish Anise",
-    scientificName: "Pimpinella anisum",
-    origin: "Native to the Eastern Mediterranean region, including Turkey",
-    chemicalFormulation: "Contains anethole, estragole, and other essential oils",
-    applications: "Used in cosmetics for its aromatic properties and mild antiseptic effects. Found in perfumes, soaps, and lotions."
-  },
-  {
-    name: "Black Cumin Seed",
-    scientificName: "Nigella sativa",
-    origin: "Native to the Middle East and South Asia",
-    chemicalFormulation: "Contains thymoquinone, nigellone, and various alkaloids",
-    applications: "Known for its anti-inflammatory, antioxidant, and antimicrobial properties. Used in skincare products to treat acne, eczema, and other skin conditions."
-  },
-  {
-    name: "Sumac",
-    scientificName: "Rhus coriaria",
-    origin: "Native to the Mediterranean and Middle Eastern regions",
-    chemicalFormulation: "Rich in tannins, flavonoids, and organic acids",
-    applications: "Used in cosmetics for its astringent and antioxidant properties. Incorporated into toners, face masks, and scrubs to tighten pores and protect the skin from free radicals."
-  }
-];
-
 const Products = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('/src/data/products.json');
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
     <div className="container mx-auto px-4 py-16 bg-soft-beige section-padding">
       <h1 className="text-4xl font-bold mb-8 text-center text-earth-green">Our Products</h1>
@@ -38,7 +31,7 @@ const Products = () => {
               <Badge variant="secondary" className="mt-2">{product.scientificName}</Badge>
             </CardHeader>
             <CardContent className="flex-grow mt-4">
-              <img src="/placeholder.svg" alt={product.name} className="w-full h-48 object-cover mb-4 rounded" />
+              <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4 rounded" />
               <h3 className="font-semibold mb-2 text-brown">Origin:</h3>
               <p className="mb-4 text-dark-gray">{product.origin}</p>
               <h3 className="font-semibold mb-2 text-brown">Chemical Formulation:</h3>
