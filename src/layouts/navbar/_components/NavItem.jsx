@@ -6,10 +6,10 @@ export const NavItem = ({ to, children, className }) => (
     to={to}
     className={({ isActive }) =>
       cn(
-        "transition-colors",
+        "transition-colors link-transition",
         isActive
-          ? "text-green-800 font-semibold"
-          : "text-gray-600 hover:text-green-700",
+          ? "text-gold font-semibold"
+          : "text-white hover:text-soft-beige",
         className,
       )
     }
