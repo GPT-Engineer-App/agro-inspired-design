@@ -9,7 +9,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-4 text-gold">Welcome to Agro L'onious</h1>
-            <p className="text-2xl mb-8 text-white font-semibold drop-shadow-lg">Cultivating Nature's Finest Ingredients for Beauty and Wellness</p>
+            <p className="text-2xl mb-8 text-brown font-semibold drop-shadow-lg">Cultivating Nature's Finest Ingredients for Beauty and Wellness</p>
             <Button asChild size="lg" className="bg-rust-orange hover:bg-gold text-white transition-colors duration-300 btn-transition">
               <NavLink to="/products">
                 Explore Our Products
